@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private ArrayList<Student> mDataset;
+    private ArrayList<Student> students;
     private Random generator = new Random();
 
     @Override
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mDataset = new ArrayList<>();
+        students = new ArrayList<>();
         Student newStudent = new Student("Boen Li", "male", "not graduated");
         Student newStudent1 = new Student("Maureen Ding", "female", "not graduated");
         Student newStudent2 = new Student("Dasheng Zhang", "male", "graduated");
@@ -39,17 +41,17 @@ public class MainActivity extends AppCompatActivity {
         Student newStudent8 = new Student("Cathy Liao", "female", "not graduated");
         Student newStudent9 = new Student("Sean Ma", "male", "graduated");
         Student newStudent10 = new Student("Wanshu Wang", "female", "not graduated");
-        mDataset.add(newStudent);
-        mDataset.add(newStudent1);
-        mDataset.add(newStudent2);
-        mDataset.add(newStudent3);
-        mDataset.add(newStudent4);
-        mDataset.add(newStudent5);
-        mDataset.add(newStudent6);
-        mDataset.add(newStudent7);
-        mDataset.add(newStudent8);
-        mDataset.add(newStudent9);
-        mDataset.add(newStudent10);
+        students.add(newStudent);
+        students.add(newStudent1);
+        students.add(newStudent2);
+        students.add(newStudent3);
+        students.add(newStudent4);
+        students.add(newStudent5);
+        students.add(newStudent6);
+        students.add(newStudent7);
+        students.add(newStudent8);
+        students.add(newStudent9);
+        students.add(newStudent10);
         mAdapter = new MyAdapter(mDataset);
         mRecyclerView.setAdapter(mAdapter);
 
@@ -71,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     public void addNewStudent()
     {
         int position = generator.nextInt(9);
-        Student addStudent = mDataset.get(position);
+        Student addStudent = students.get(position);
         mDataset.add(addStudent);
         mAdapter.notifyDataSetChanged();
     }

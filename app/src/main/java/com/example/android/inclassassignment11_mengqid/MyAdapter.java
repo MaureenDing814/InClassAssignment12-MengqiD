@@ -72,7 +72,7 @@ import java.util.ArrayList;
                 case "Maureen Ding": holder.mProfile.setImageResource(R.drawable.maureen);break;
                 case "Dasheng Zhang": holder.mProfile.setImageResource(R.drawable.dasheng);break;
                 case "Yao Chen": holder.mProfile.setImageResource(R.drawable.yao);break;
-                case "Mengqi": holder.mProfile.setImageResource(R.drawable.mengqi);break;
+                case "Mengqi Ding": holder.mProfile.setImageResource(R.drawable.mengqi);break;
                 case "Yang": holder.mProfile.setImageResource(R.drawable.yang);break;
                 case "Mike": holder.mProfile.setImageResource(R.drawable.mike);break;
                 case "Ginger": holder.mProfile.setImageResource(R.drawable.ginger);break;
