@@ -1,10 +1,12 @@
 package com.example.android.inclassassignment11_mengqid;
 
+import java.io.Serializable;
+
 /**
  * Created by Maureen_Ding on 4/18/17.
  */
 
-public class Student {
+public class Student implements Serializable{
     String name;
     String gender;
     String year;

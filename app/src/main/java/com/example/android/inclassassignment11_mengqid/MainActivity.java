@@ -1,5 +1,6 @@
 package com.example.android.inclassassignment11_mengqid;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         students.add(newStudent8);
         students.add(newStudent9);
         students.add(newStudent10);
-        mAdapter = new MyAdapter(mDataset);
+        mAdapter = new MyAdapter(mDataset,this);
         mRecyclerView.setAdapter(mAdapter);
 
         for (int i = 0; i < 3; i++) {
